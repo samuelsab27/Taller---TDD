@@ -59,21 +59,27 @@ public void shouldRegisterValidPerson() {
     Assert.assertEquals(RegisterResult.VALID, result);
 }
 
-## Escenarios BDD (Behavior Driven Development)
-Test	Escenario (Given – When – Then)
-shouldReturnInvalidWhenPersonIsNull	Dado que la persona es null, cuando intento registrarla, entonces el resultado debe ser INVALID.
-shouldRejectWhenIdIsZeroOrNegative	Dado que la persona tiene id inválido (≤ 0), cuando intento registrarla, entonces el resultado debe ser INVALID.
-shouldRejectUnderageAt17	Dado que la persona tiene 17 años, cuando intento registrarla, entonces el resultado debe ser UNDERAGE.
-shouldAcceptAdultAt18	Dado que la persona tiene 18 años, cuando intento registrarla, entonces el resultado debe ser VALID.
-shouldRejectInvalidAgeOver120	Dado que la persona tiene 121 años, cuando intento registrarla, entonces el resultado debe ser INVALID_AGE.
+## 🧩 Escenarios BDD (Behavior Driven Development)
+
+| Test | Escenario (Given – When – Then) |
+|------|----------------------------------|
+| shouldReturnInvalidWhenPersonIsNull | Dado que la persona es null, cuando intento registrarla, entonces el resultado debe ser `INVALID`. |
+| shouldRejectWhenIdIsZeroOrNegative | Dado que la persona tiene id inválido (≤ 0), cuando intento registrarla, entonces el resultado debe ser `INVALID`. |
+| shouldRejectUnderageAt17 | Dado que la persona tiene 17 años, cuando intento registrarla, entonces el resultado debe ser `UNDERAGE`. |
+| shouldAcceptAdultAt18 | Dado que la persona tiene 18 años, cuando intento registrarla, entonces el resultado debe ser `VALID`. |
+| shouldRejectInvalidAgeOver120 | Dado que la persona tiene 121 años, cuando intento registrarla, entonces el resultado debe ser `INVALID_AGE`. |
+
 ## Matriz de clases de equivalencia
--Caso	Entrada	Resultado esperado	Test asociado
--Persona viva, 30 años, id único	(edad=30, vivo=true, id=1)	VALID	shouldRegisterValidPerson
--Persona muerta	(edad=45, vivo=false)	DEAD	shouldRejectDeadPerson
--Edad 17	(edad=17, vivo=true)	UNDERAGE	shouldRejectUnderageAt17
--Edad -1	(edad=-1, vivo=true)	INVALID_AGE	shouldRejectInvalidAgeNegative
--Edad 121	(edad=121, vivo=true)	INVALID_AGE	shouldRejectInvalidAgeOver120
--Persona duplicada	(id=777 repetido)	DUPLICATED	shouldRejectDuplicatePerson
+
+
+| Caso | Entrada | Resultado esperado | Test asociado |
+|------|----------|--------------------|----------------|
+| Persona viva, 30 años, id único | (edad=30, vivo=true, id=1) | `VALID` | shouldRegisterValidPerson |
+| Persona muerta | (edad=45, vivo=false) | `DEAD` | shouldRejectDeadPerson |
+| Edad 17 | (edad=17, vivo=true) | `UNDERAGE` | shouldRejectUnderageAt17 |
+| Edad -1 | (edad=-1, vivo=true) | `INVALID_AGE` | shouldRejectInvalidAgeNegative |
+| Edad 121 | (edad=121, vivo=true) | `INVALID_AGE` | shouldRejectInvalidAgeOver120 |
+| Persona duplicada | (id=777 repetido) | `DUPLICATED` | shouldRejectDuplicatePerson |
 
 ## Gestión de defectos (defectos.md)
 
