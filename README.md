@@ -1,6 +1,6 @@
 # Taller de TDD - Pruebas Unitarias
 
-## Nombre de Integrantes: Samuel Sabogal Espinel Leon🦁, Julian Andres Vasquez Pedraza
+## Nombre de Integrantes: Samuel Sabogal Espinel Leon🦁, Julian Andres Vasquez Pedraza, David Santiago Buendia Londoño
 
 Este proyecto implementa el enfoque **Test-Driven Development (TDD)** aplicado a una **Arquitectura Limpia (Clean Architecture)**.  
 El objetivo es desarrollar reglas de negocio en el dominio de forma aislada, garantizando calidad y mantenibilidad mediante pruebas unitarias.
